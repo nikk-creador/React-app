@@ -1,14 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Services from "./pages/Services";
+import ServiceName from "./components/ServiceName";
+import ServiceDisplay from "./components/ServiceDisplay";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-
 import { Fragment } from "react";
+import "./App.css";
 export default function App() {
   let liCollection = [
     {
@@ -71,13 +72,16 @@ export default function App() {
             #
           </button>
         </nav>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/services" component={Services} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact component={NotFound} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="/services" element={<Services />}>
+            <Route index element={<ServiceName />} />
+            <Route path=":slug" element={<ServiceDisplay />} />
+          </Route>
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </Router>
   );
