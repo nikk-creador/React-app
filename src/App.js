@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Fragment } from "react";
 import "./App.css";
+import { useState } from "react";
 export default function App() {
   let liCollection = [
     {
@@ -40,6 +41,11 @@ export default function App() {
       name: "Contact",
     },
   ];
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+         const handleClick = () => {
+    setIsDarkMode(prevState => !prevState);
+  };
 
   return (
     <Router>
@@ -74,9 +80,12 @@ export default function App() {
               })}
             </ul>
           </div>
-          <button type="button" className="btn btn-dark d-lg-block d-none">
-            <i class="bi bi-moon-fill"></i>
-          </button>
+
+    <button type="button" className="btn btn-dark d-lg-block d-none" onClick={handleClick}>
+      {isDarkMode ? <i className="bi bi-brightness-high-fill"></i> : <i className="bi bi-moon-fill"></i>}
+    </button>
+
+
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
