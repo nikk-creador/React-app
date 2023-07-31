@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Heading from "../components/Heading";
 import "../App.css";
 
@@ -25,7 +25,7 @@ const About = () => {
             </Col>
           </Row>
           <Row>
-            <Col md>
+            <Col md={12}>
               <p className="p-5">
                 I'm <span className="fw-bold">Naitik Bhavsar</span> passionate
                 about cutting-edge technologies and creating visually stunning
@@ -38,9 +38,9 @@ const About = () => {
           </Row>
           <Row>
             <Col className="text-center">
-              <Button
+              <button
                 variant="outline-secondary"
-                className="btn btn-outline-secondary text-dark p-3"
+                className="btn btn-outline-secondary p-3 m-4"
               >
                 <a
                   href="upload pdf here"
@@ -49,7 +49,7 @@ const About = () => {
                 >
                   Download Resume
                 </a>
-              </Button>
+              </button>
             </Col>
           </Row>
         </Col>

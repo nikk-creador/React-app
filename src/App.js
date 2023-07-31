@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import Projects from "./pages/Projects";
 import ServiceName from "./components/ServiceName";
 import ServiceDisplay from "./components/ServiceDisplay";
 import About from "./pages/About";
@@ -19,17 +20,22 @@ export default function App() {
     },
     {
       id: 2,
+      to: "/projects",
+      name: "Projects",
+    },
+    {
+      id: 3,
       to: "/services",
       name: "Services",
     },
     {
-      id: 3,
+      id: 4,
       to: "/about",
       name: "About",
     },
 
     {
-      id: 4,
+      id: 5,
       to: "/contact",
       name: "Contact",
     },
@@ -69,15 +75,17 @@ export default function App() {
             </ul>
           </div>
           <button type="button" className="btn btn-dark d-lg-block d-none">
-            #
+            <i class="bi bi-moon-fill"></i>
           </button>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="projects" element={<Projects />} />
           <Route path="/services" element={<Services />}>
             <Route index element={<ServiceName />} />
             <Route path=":slug" element={<ServiceDisplay />} />
+            {/* child route of services which will be made available using the outlet in v6 */}
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />

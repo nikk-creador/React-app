@@ -13,8 +13,15 @@ const ServiceDisplay = () => {
       description:
         "From web and mobile app development to custom software, we bring your vision to life. Trusted technology partners for success.",
     },
+    database: {
+      title: "Database",
+      description:
+        "Unlock the full potential of your data with our SQL service. From complex queries to seamless integrations, we've got you covered",
+    },
   };
+
   const { slug } = useParams();
+  console.log(slug);
   const service = serviceList[slug];
   if (!service) {
     return <NotFound />;
@@ -28,8 +35,8 @@ const ServiceDisplay = () => {
           {" "}
           <i className="bi bi-code-slash fs-3"></i>
         </div>
-        <div className=" mb-3">
-          <h4 className="text-dark text-uppercase">{title}</h4>
+        <div className=" mt-3">
+          <h4 className="text-dark">{title}</h4>
         </div>
         <p className="card-text text-dark lead fs-5">{description}</p>
       </div>

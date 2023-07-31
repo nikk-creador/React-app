@@ -12,6 +12,11 @@ const ServiceName = () => {
       description:
         "From web and mobile app development to custom software, we bring your vision to life. Trusted technology partners for success.",
     },
+    database: {
+      title: "Database",
+      description:
+        "Unlock the full potential of your data with our SQL service. From complex queries to seamless integrations, we've got you covered",
+    },
   };
 
   return (
@@ -20,10 +25,11 @@ const ServiceName = () => {
         {Object.entries(serviceList).map(([slug, { title }]) => (
           <li key={slug}>
             <Link className="nav-link" to={`/services/${slug}`}>
-              <div className="d-flex">
+              <div className="d-flex justify-content-start align-items-center">
                 <p className="lead fs-3">
                   {" "}
-                  <i class="bi bi-arrow-right"></i> {title}
+                  <i className="bi bi-arrow-right"></i>{" "}
+                  <span className="service-hover">{title}</span>
                 </p>
               </div>
             </Link>
