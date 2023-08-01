@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
+import { useState } from "react";
 import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import ServiceName from "./components/ServiceName";
@@ -10,6 +11,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { NavLink } from "react-router-dom";
+
 export default function App() {
   let liCollection = [
     {
@@ -40,10 +43,15 @@ export default function App() {
     },
   ];
 
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const handleClick = () => {
+    setIsDarkMode((prevState) => !prevState);
+  };
+  // dark mode button
   return (
     <Router>
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom p-3">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom p-3 fs-5">
           <Link to="/" className="navbar-brand mx-5">
             Naitik.dev
           </Link>
@@ -63,26 +71,39 @@ export default function App() {
               {liCollection.map((liItem) => {
                 return (
                   <Fragment key={liItem.id}>
-                    <li className="nav-item mx-3">
-                      <Link to={liItem.to} className="nav-link">
+                    <li className="nav-item mx-5 ms-3">
+                      <NavLink to={liItem.to} className="nav-link">
                         {liItem.name}
-                      </Link>
+                      </NavLink>
                     </li>
                   </Fragment>
                 );
               })}
             </ul>
+            <button
+              type="button"
+              className="btn btn-dark  ms-3 mx-5"
+              onClick={handleClick}
+            >
+              {isDarkMode ? (
+                <i className="bi bi-brightness-high-fill"></i>
+              ) : (
+                <i className="bi bi-moon-fill"></i>
+              )}
+            </button>
           </div>
-          <button type="button" className="btn btn-dark d-lg-block d-none">
-            <i className="bi bi-moon-fill"></i>
-          </button>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="projects" element={<Projects />}>
+            <Route index element={<ServiceName />} />
+            {/* index means what it will render first on services route */}
+            <Route path=":slug" element={<ServiceDisplay />} />
+          </Route>
           <Route path="/services" element={<Services />}>
             <Route index element={<ServiceName />} />
+            {/* index means what it will render first on services route */}
             <Route path=":slug" element={<ServiceDisplay />} />
             {/* child route of services which will be made available using the outlet in v6 */}
           </Route>
