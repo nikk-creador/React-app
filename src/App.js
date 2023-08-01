@@ -12,8 +12,9 @@ import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { NavLink } from "react-router-dom";
-import Admin from "./pages/Admin";
-
+// import Admin from "./pages/Admin";
+// import Login from "./pages/Login";
+// import PrivateRoutes from "./components/PrivateRoutes";
 export default function App() {
   let liCollection = [
     {
@@ -95,7 +96,12 @@ export default function App() {
           </div>
         </nav>
         <Routes>
-          <Route path="/admin" element={<Admin />} />
+          {/* <Route element={<Login />} path="/login" />
+          <Route element={<PrivateRoutes />}>
+            <Route element={<Admin />} path="/admin" />
+          </Route> */}
+          {/* this is for protected routes */}
+
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />}>
