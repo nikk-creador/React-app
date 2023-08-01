@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { NavLink } from "react-router-dom";
+import ProjectName from "./components/ProjectName";
+import ProjectDisplay from "./components/ProjectDisplay";
 // import Admin from "./pages/Admin";
 // import Login from "./pages/Login";
 // import PrivateRoutes from "./components/PrivateRoutes";
@@ -105,13 +107,15 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />}>
-            <Route index element={<ServiceName />} />
+            {/* <Route index element={<ProjectName />} />
+            <Route path=":slug" element={<ProjectDisplay />} /> */}
+            <Route index element={<ProjectName />} />
             <Route path=":slug" element={<ServiceDisplay />} />
           </Route>
-          <Route path="/services" element={<Services />}>
+          <Route path="services" element={<Services />}>
             <Route index element={<ServiceName />} />
-            {/* index means what it will render first on services route */}
             <Route path=":slug" element={<ServiceDisplay />} />
+            {/* index means what it will render first on services route */}
             {/* child route of services which will be made available using the outlet in v6 */}
           </Route>
           <Route path="/about" element={<About />} />

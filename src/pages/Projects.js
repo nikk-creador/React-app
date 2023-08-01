@@ -9,6 +9,7 @@ import { useState } from "react";
 const Projects = () => {
   let arr = ["design", "development", "database"];
   let navigate = useNavigate();
+
   let [count, setCount] = useState(0);
   function handleClick() {
     setCount(count + 1);
@@ -57,7 +58,7 @@ const Projects = () => {
           </button>
         )}
         {/* next button disabled when it is on last project , {count = 3 } */}
-      </div>
+      </div>{" "}
     </Container>
   );
 };
