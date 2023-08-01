@@ -1,17 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
 import Projects from "./pages/Projects";
+import Services from "./pages/Services";
 import ServiceName from "./components/ServiceName";
 import ServiceDisplay from "./components/ServiceDisplay";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Fragment } from "react";
 import "./App.css";
-import { useState } from "react";
 export default function App() {
   let liCollection = [
     {
@@ -41,11 +39,6 @@ export default function App() {
       name: "Contact",
     },
   ];
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-         const handleClick = () => {
-    setIsDarkMode(prevState => !prevState);
-  };
 
   return (
     <Router>
@@ -80,12 +73,9 @@ export default function App() {
               })}
             </ul>
           </div>
-
-    <button type="button" className="btn btn-dark d-lg-block d-none" onClick={handleClick}>
-      {isDarkMode ? <i className="bi bi-brightness-high-fill"></i> : <i className="bi bi-moon-fill"></i>}
-    </button>
-
-
+          <button type="button" className="btn btn-dark d-lg-block d-none">
+            <i className="bi bi-moon-fill"></i>
+          </button>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
