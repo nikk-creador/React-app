@@ -20,9 +20,9 @@ const ProjectDisplay = () => {
     },
   };
 
-  const { slug } = useParams();
-  console.log(slug, "in display");
-  const project = projectList[slug];
+  const { slug1 } = useParams();
+  console.log(slug1, "in display");
+  const project = projectList[slug1];
   console.log(project);
   if (!project) {
     return <NotFound />;

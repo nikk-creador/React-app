@@ -1,7 +1,7 @@
 import React from "react";
 import NotFound from "../pages/NotFound";
 import { useParams } from "react-router-dom";
-const ServiceDisplay = () => {
+const ServiceDisplay = (props) => {
   const serviceList = {
     design: {
       title: "Design",
@@ -21,6 +21,7 @@ const ServiceDisplay = () => {
   };
 
   const { slug } = useParams();
+  console.log(slug , "in ser")
   const service = serviceList[slug];
   if (!service) {
     return <NotFound />;
