@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 187px);
 }
 
 .custom-container {
@@ -56,16 +56,6 @@
 }
 .custom-li {
   list-style: disc;
-}
-/* 
---------------------------------- */
-
-.custom-letter-spacing {
-  letter-spacing: 0.5rem;
-}
-
-.custom-line-height {
-  line-height: 1.8rem;
 }
 
 .text-insta {

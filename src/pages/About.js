@@ -26,7 +26,10 @@ const About = () => {
           </Row>
           <Row>
             <Col md={12}>
-              <p className="p-5">
+              <p
+                className="p-5 align-items-start"
+                style={{ letterSpacing: "0.1rem", lineHeight: "2rem" }}
+              >
                 I'm <span className="fw-bold">Naitik Bhavsar</span> passionate
                 about cutting-edge technologies and creating visually stunning
                 interfaces. I believe in the power of exceptional user

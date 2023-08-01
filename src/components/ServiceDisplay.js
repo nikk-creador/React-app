@@ -21,7 +21,6 @@ const ServiceDisplay = () => {
   };
 
   const { slug } = useParams();
-  console.log(slug);
   const service = serviceList[slug];
   if (!service) {
     return <NotFound />;

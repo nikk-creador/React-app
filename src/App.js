@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { NavLink } from "react-router-dom";
+import Admin from "./pages/Admin";
 
 export default function App() {
   let liCollection = [
@@ -94,11 +95,11 @@ export default function App() {
           </div>
         </nav>
         <Routes>
+          <Route path="/admin" element={<Admin />} />
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />}>
             <Route index element={<ServiceName />} />
-            {/* index means what it will render first on services route */}
             <Route path=":slug" element={<ServiceDisplay />} />
           </Route>
           <Route path="/services" element={<Services />}>

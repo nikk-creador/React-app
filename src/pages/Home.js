@@ -4,10 +4,13 @@ import "../App.css";
 const Home = () => {
   return (
     <Container className="my-5 text-center custom-container">
-      <div className="contact-info">
-        <p className="lead">
+      <div>
+        <p
+          className="lead"
+          style={{ letterSpacing: "0.3rem", lineHeight: "3rem" }}
+        >
           I love turning design ideas into real things,
-          <span className="d-block lh-5">making imagination come to life.</span>
+          <span className="d-block">making imagination come to life.</span>
         </p>
       </div>
     </Container>
