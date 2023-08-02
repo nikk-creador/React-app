@@ -6,7 +6,7 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 // import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import ProjectName from "./components/ProjectName";
@@ -58,6 +58,14 @@ export default function App() {
   const handleClick = () => {
     setIsDarkMode((prevState) => !prevState);
   };
+  const navButton = useRef(null);
+  const linksContainerRef = useRef(null);
+
+  function collapseNav() {
+    navButton.current.classList.add("collapsed");
+    linksContainerRef.current.classList.remove("show");
+  }
+
   // dark mode button
   return (
     <Router>
@@ -83,7 +91,11 @@ export default function App() {
                 return (
                   <Fragment key={liItem.id}>
                     <li className="nav-item mx-5 ms-3">
-                      <NavLink to={liItem.to} className="nav-link">
+                      <NavLink
+                        onClick={collapseNav}
+                        to={liItem.to}
+                        className="nav-link"
+                      >
                         {liItem.name}
                       </NavLink>
                     </li>

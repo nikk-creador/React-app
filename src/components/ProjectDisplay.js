@@ -36,19 +36,6 @@ const ProjectDisplay = () => {
   const { title, description, code, demo } = project;
 
   return (
-    // <div className="card custom-services-effect custom-container w-75 mt-4">
-    //   <div className="card-body  bg-light rounded-2 p-4 ">
-    //     <div className="mb-2">
-    //       {" "}
-    //       <i className="bi bi-code-slash fs-3"></i>
-    //     </div>
-    //     <div className=" mt-3">
-    //       <h4 className="text-dark">{title}</h4>
-    //     </div>
-    //     <p className="card-text text-dark lead fs-5">{description}</p>
-    //   </div>
-    // </div>
-
     <div className="card custom-services-effect custom-container w-75 mt-4">
       {/* <img
         src={}
