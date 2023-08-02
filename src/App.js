@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
 import { useState } from "react";
+import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import ServiceName from "./components/ServiceName";
@@ -14,9 +14,6 @@ import "./App.css";
 import { NavLink } from "react-router-dom";
 import ProjectName from "./components/ProjectName";
 import ProjectDisplay from "./components/ProjectDisplay";
-// import Admin from "./pages/Admin";
-// import Login from "./pages/Login";
-// import PrivateRoutes from "./components/PrivateRoutes";
 export default function App() {
   let liCollection = [
     {
@@ -98,12 +95,6 @@ export default function App() {
           </div>
         </nav>
         <Routes>
-          {/* <Route element={<Login />} path="/login" />
-          <Route element={<PrivateRoutes />}>
-            <Route element={<Admin />} path="/admin" />
-          </Route> */}
-          {/* this is for protected routes */}
-
           <Route path="/" element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />}>
