@@ -108,11 +108,11 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />}>
             <Route index element={<ProjectName />} />
-            <Route path=":slug1" element={<ProjectDisplay  />} />
+            <Route path=":slugProject" element={<ProjectDisplay />} />
           </Route>
           <Route path="services" element={<Services />}>
             <Route index element={<ServiceName />} />
-            <Route path=":slug" element={<ServiceDisplay />} />
+            <Route path=":slugService" element={<ServiceDisplay />} />
             {/* index means what it will render first on services route */}
             {/* child route of services which will be made available using the outlet in v6 */}
           </Route>

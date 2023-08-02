@@ -1,7 +1,7 @@
 import React from "react";
 import NotFound from "../pages/NotFound";
 import { useParams } from "react-router-dom";
-const ServiceDisplay = (props) => {
+const ServiceDisplay = () => {
   const serviceList = {
     design: {
       title: "Design",
@@ -20,9 +20,8 @@ const ServiceDisplay = (props) => {
     },
   };
 
-  const { slug } = useParams();
-  console.log(slug , "in ser")
-  const service = serviceList[slug];
+  const { slugService } = useParams();
+  const service = serviceList[slugService];
   if (!service) {
     return <NotFound />;
   }
@@ -33,7 +32,7 @@ const ServiceDisplay = (props) => {
       <div className="card-body p-4 ">
         <div className="mb-2">
           {" "}
-          <i className="bi bi-code-slash fs-3"></i>
+          <i className="bi bi-filetype-html fs-2"></i>
         </div>
         <div className=" mt-3">
           <h4 className="text-dark">{title}</h4>

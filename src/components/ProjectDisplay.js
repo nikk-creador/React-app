@@ -1,29 +1,28 @@
 import React from "react";
 import NotFound from "../pages/NotFound";
 import { useParams } from "react-router-dom";
+
 const ProjectDisplay = () => {
   const projectList = {
     project1: {
-      title: "Project1",
+      title: "Project 1",
       description:
         "Elevate your online game with our web design service. We'll take your website from meh to magnificent in no time!",
     },
     project2: {
-      title: "Project2",
+      title: "Project 2",
       description:
         "From web and mobile app development to custom software, we bring your vision to life. Trusted technology partners for success.",
     },
     project3: {
-      title: "Project3",
+      title: "Project 3",
       description:
         "Unlock the full potential of your data with our SQL service. From complex queries to seamless integrations, we've got you covered",
     },
   };
 
-  const { slug1 } = useParams();
-  console.log(slug1, "in display");
-  const project = projectList[slug1];
-  console.log(project);
+  const { slugProject } = useParams();
+  const project = projectList[slugProject];
   if (!project) {
     return <NotFound />;
   }

@@ -22,9 +22,9 @@ const ServiceName = () => {
   return (
     <div className="m-4">
       <ul>
-        {Object.entries(serviceList).map(([slug, { title }]) => (
-          <li key={slug}>
-            <Link className="nav-link" to={`/services/${slug}`}>
+        {Object.entries(serviceList).map(([slugService, { title }]) => (
+          <li key={slugService}>
+            <Link className="nav-link" to={`/services/${slugService}`}>
               <div className="d-flex justify-content-start align-items-center">
                 <p className="lead fs-3">
                   {" "}
