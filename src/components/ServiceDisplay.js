@@ -1,6 +1,9 @@
 import React from "react";
 import NotFound from "../pages/NotFound";
 import { useParams } from "react-router-dom";
+import css from "../img/icons8-css3-48.png";
+import js from "../img/icons8-javascript-48.png";
+import sql from "../img//icons8-sql-48.png";
 const ServiceDisplay = () => {
   const serviceList = {
     design: {
@@ -31,8 +34,22 @@ const ServiceDisplay = () => {
     <div className="card custom-services-effect custom-container w-75 mt-4">
       <div className="card-body  bg-light rounded-2 p-4 ">
         <div className="mb-2">
-          {" "}
-          <i className="bi bi-filetype-html fs-2"></i>
+          {console.log(title, "title")}
+          {(() => {
+            switch (title) {
+              case "Design":
+                return <img src={css} alt="x" className="img img-fluid" />;
+
+              case "Database":
+                return <img src={sql} alt="x" className="img img-fluid" />;
+
+              case "Development":
+                return <img src={js} alt="x" className="img img-fluid" />;
+
+              default:
+                return <img src={js} alt="x" className="img img-fluid" />;
+            }
+          })()}
         </div>
         <div className=" mt-3">
           <h4 className="text-dark">{title}</h4>

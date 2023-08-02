@@ -35,12 +35,15 @@ const Projects = () => {
   const arr = Object.keys(projectList);
   const navigate = useNavigate();
 
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
   function handleClick() {
     setCount(count + 1);
     navigate(`${arr[count]}`);
-  } // next navigate
-
+  }
+  // next navigate
+  if (location.pathname === "/projects") {
+    count = 0;
+  }
   function handleClickBack() {
     setCount(count - 1);
     navigate(-1);
@@ -83,7 +86,7 @@ const Projects = () => {
             Next
           </button>
         )}
-        {/* next button disabled when it is on last project, {count = arr.length - 1} */}
+        {/* next button disabled when it is on last project, {count = arr.length } */}
       </div>
     </Container>
   );
