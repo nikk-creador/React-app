@@ -29,7 +29,7 @@ const ServiceDisplay = () => {
 
   return (
     <div className="card custom-services-effect custom-container w-75 mt-4">
-      <div className="card-body p-4 ">
+      <div className="card-body  bg-light rounded-2 p-4 ">
         <div className="mb-2">
           {" "}
           <i className="bi bi-filetype-html fs-2"></i>

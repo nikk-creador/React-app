@@ -7,20 +7,27 @@ import { useState } from "react";
 
 const Projects = () => {
   const projectList = {
-    project1: {
-      title: "Project 1",
+    frontendbootcamp: {
+      title: "Frontend Bootcamp",
       description:
-        "Elevate your online game with our web design service. We'll take your website from meh to magnificent in no time!",
+        "A dynamic learning platform built with HTML, CSS,JavaScript, and Bootstrap, providing an immersive experience in front-end development.",
+      img: "barber",
+      demo: "https://development-bootcamp.netlify.app/",
+      code: "https://github.com/nikk-creador/front-end-bootcamp",
     },
-    project2: {
-      title: "Project 2",
+    plantdiseaseprediction: {
+      title: "Plant Disease Prediction",
       description:
-        "From web and mobile app development to custom software, we bring your vision to life. Trusted technology partners for success.",
+        "Build a CNN model,The system identifies plant diseases with accuracy of 97 percent. Also, developed aninterface using HTML, CSS, and JavaScript to allow users to easily interact with the system locally",
+      demo: "https://www.dropbox.com/s/lyla2w0enko9ib7/plant%20disease%20prediction.mp4?dl=0",
+      code: "https://www.dropbox.com/s/lyla2w0enko9ib7/plant%20disease%20prediction.mp4?dl=0",
     },
-    project3: {
-      title: "Project 3",
+    hairstudio: {
+      title: "Hair Studio",
       description:
-        "Unlock the full potential of your data with our SQL service. From complex queries to seamless integrations, we've got you covered",
+        "I created a hair studio website using HTML, CSS, and JavaScript to showcase their services and expertise.The website has a user-friendly interface and effectively promotes the studio’s offerings",
+      code: "https://github.com/nikk-creador/Hair-Studio-website",
+      demo: "https://barbers-point.netlify.app/",
     },
   };
 
@@ -43,6 +50,7 @@ const Projects = () => {
     <Container className="my-5 text-center custom-container">
       <Heading heading="Pro" subhead="j" subheading="ects" />
       <Outlet />
+
       <div className="container-fluid m-5">
         {location.pathname === "/projects" ? (
           <button

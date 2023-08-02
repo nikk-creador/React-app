@@ -69,7 +69,8 @@
 .social-hover:hover {
   transform: translateY(-10px);
 }
-li {
+li,
+a {
   list-style-type: none;
 }
 .text-custom {
@@ -81,4 +82,8 @@ li {
 }
 .service-hover:hover {
   text-decoration: underline;
+}
+.project-urlBtn,
+.project-urlBtn:hover {
+  text-decoration: none;
 }
