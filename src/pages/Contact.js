@@ -9,7 +9,7 @@ const Contact = () => {
       <Heading heading="contact " subhead="me" />
       <div className="m-4">
         <div className="contact-info mt-1 d-flex align-items-start flex-column">
-          <p className="fs-3  lead mb-3">
+          <p className="inquiry-text lead mb-3">
             For any inquiries, please contact us at:
           </p>
           <p className="mb-3">
@@ -49,7 +49,7 @@ const Contact = () => {
           data-aos="flip-right"
           data-aos-easing="linear"
           data-aos-delay="500"
-          className="text-dark text-uppercase"
+          className="text-dark text-uppercase follow"
         >
           Follow{" "}
           <span

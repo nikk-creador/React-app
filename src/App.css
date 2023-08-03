@@ -93,4 +93,10 @@ a {
   .project-title {
     font-size: 1.7rem !important  ;
   }
+  .inquiry-text {
+    font-size: 1.7rem !important  ;
+  }
+  .follow {
+    letter-spacing: "0.2rem";
+  }
 }
