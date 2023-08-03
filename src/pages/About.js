@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Heading from "../components/Heading";
 import "../App.css";
-
+import profile from "../img/animation.gif";
 const About = () => {
   return (
-    <Container className="my-5 text-center custom-container">
+    <Container className="my-5 text-center custom-container ">
       <Row>
-        <Col className="m-4 text-center">
+        <Col className="mb-4 text-center">
           <Heading heading="About " subhead="me" />
         </Col>
       </Row>
@@ -16,7 +16,11 @@ const About = () => {
           md
           className="d-flex flex-column align-items-center justify-content-center"
         >
-          <img src="" className="img-fluid w-50" alt="My profile pic" />
+          <img
+            src={profile}
+            className="img img-fluid w-75 "
+            alt="My profile pic"
+          />
         </Col>
         <Col md>
           <Row>

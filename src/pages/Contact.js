@@ -45,13 +45,15 @@ const Contact = () => {
           </div>
         </div>
         <h4
-          style={{ letterSpacing: "0.3rem", lineHeight: "3rem" }}
-          data-aos="flip-up"
-          class="text-dark text-uppercase"
+          style={{ letterSpacing: "0.5rem", lineHeight: "4rem" }}
+          data-aos="flip-right"
+          data-aos-easing="linear"
+          data-aos-delay="500"
+          className="text-dark text-uppercase"
         >
           Follow{" "}
           <span
-            class="fw-bold text-primary"
+            className="fw-bold text-primary"
             style={{ fontFamily: "Bungee Shade" }}
           >
             #naitik

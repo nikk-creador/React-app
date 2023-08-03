@@ -53,7 +53,12 @@ const Navbar = () => {
     <div>
       {" "}
       <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom p-3 fs-5">
-        <Link data-aos="fade-right" to="/" className="navbar-brand mx-5">
+        <Link
+          onClick={collapseNav}
+          data-aos="fade-right"
+          to="/"
+          className="navbar-brand mx-5"
+        >
           Naitik.dev
         </Link>
         <button

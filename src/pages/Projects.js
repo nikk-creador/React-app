@@ -93,5 +93,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-// https://github.com/nikk-creador/Portfolio-website

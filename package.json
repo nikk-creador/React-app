@@ -48,5 +48,6 @@
   },
   "plugins": [
     "@babel/plugin-proposal-export-default-from"
-  ]
+  ],
+  "homepage": "https://Naitik-ReactJs.github.io/router-v6"
 }
