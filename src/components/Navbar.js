@@ -52,6 +52,7 @@ const Navbar = () => {
           Naitik.dev
         </Link>
         <button
+          ref={navButton}
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -62,7 +63,11 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          ref={linksContainerRef}
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav m-auto">
             {liCollection.map((liItem) => {
               return (
