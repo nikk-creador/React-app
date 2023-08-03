@@ -88,3 +88,9 @@ a {
 .project-urlBtn:hover {
   text-decoration: none;
 }
+
+@media only screen and (min-width: 600px) {
+  .project-title {
+    font-size: 1.7rem !important  ;
+  }
+}

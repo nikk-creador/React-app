@@ -6,7 +6,7 @@ const Heading = (props) => {
   return (
     <h1
       data-aos="flip-up"
-      data-aos-delay={70}
+      data-aos-delay={120}
       data-aos-easing="linear"
       className="m-4 fw-light fs-1 text-uppercase"
     >

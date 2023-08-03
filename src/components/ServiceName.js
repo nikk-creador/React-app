@@ -21,7 +21,7 @@ const ServiceName = () => {
 
   return (
     <div className="m-4">
-      <ul>
+      <ul style={{ margin: 0, padding: 0 }}>
         {Object.entries(serviceList).map(([slugService, { title }]) => (
           <li key={slugService}>
             <Link className="nav-link" to={`/services/${slugService}`}>

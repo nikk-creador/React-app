@@ -30,9 +30,9 @@ const ProjectName = () => {
       <ul>
         {Object.entries(projectList).map(([slugProject, { title }]) => (
           <li key={slugProject}>
-            <div to={`/projects/${slugProject}`}>
+            <div>
               <div className="d-flex justify-content-start align-items-center">
-                <p className="lead fs-3">
+                <p className="lead project-title ">
                   <i className="bi bi-arrow-right"></i> {title}
                 </p>
               </div>

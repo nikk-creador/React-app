@@ -54,7 +54,7 @@ const ServiceDisplay = () => {
         <div className=" mt-3">
           <h4 className="text-dark">{title}</h4>
         </div>
-        <p className="card-text text-dark lead fs-5">{description}</p>
+        <p className="card-text text-dark lead fs-5 p-3">{description}</p>
       </div>
     </div>
   );

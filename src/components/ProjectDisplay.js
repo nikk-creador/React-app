@@ -43,10 +43,12 @@ const ProjectDisplay = () => {
         alt="frontend bootcamp demo screenshot"
       /> */}
 
-      <div className="card-body bg-light rounded-2 px-5 py-5 pb-5 pt-4">
+      <div className="card-body bg-light rounded-2 px-4 py-4 pb-5 pt-4">
         <i className="bi bi-code-slash fs-2"> </i>
         <h3 className="card-title mb-3">{title}</h3>
-        <p className="card-text mb-3">{description}</p>
+        <p style={{ textAlign: "justify" }} className="card-text p-2">
+          {description}
+        </p>
         <div className="btn-group mt-3" role="group" aria-label="Basic example">
           <button type="button" className="btn btn-outline-secondary">
             {" "}
