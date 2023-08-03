@@ -6,7 +6,7 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 // import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import ProjectName from "./components/ProjectName";
@@ -59,6 +59,14 @@ export default function App() {
     setIsDarkMode((prevState) => !prevState);
   };
   // dark mode button
+
+  const navButton = useRef(null);
+  const linksContainerRef = useRef(null);
+
+  function collapseNav() {
+    navButton.current.classList.add("collapsed");
+    linksContainerRef.current.classList.remove("show");
+  }
   return (
     <Router>
       <div>
@@ -67,6 +75,7 @@ export default function App() {
             Naitik.dev
           </Link>
           <button
+            ref={navButton}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -77,13 +86,21 @@ export default function App() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            ref={linksContainerRef}
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav m-auto">
               {liCollection.map((liItem) => {
                 return (
                   <Fragment key={liItem.id}>
                     <li className="nav-item mx-5 ms-3">
-                      <NavLink to={liItem.to} className="nav-link">
+                      <NavLink
+                        onClick={collapseNav}
+                        to={liItem.to}
+                        className="nav-link"
+                      >
                         {liItem.name}
                       </NavLink>
                     </li>
