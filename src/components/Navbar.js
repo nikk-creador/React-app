@@ -1,7 +1,12 @@
 import React, { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Navbar = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   let liCollection = [
     {
       id: 1,
@@ -48,7 +53,7 @@ const Navbar = () => {
     <div>
       {" "}
       <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom p-3 fs-5">
-        <Link to="/" className="navbar-brand mx-5">
+        <Link data-aos="fade-right" to="/" className="navbar-brand mx-5">
           Naitik.dev
         </Link>
         <button

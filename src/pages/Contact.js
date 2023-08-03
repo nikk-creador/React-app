@@ -23,27 +23,40 @@ const Contact = () => {
           </p>
         </div>
         <div className="icon custom-letter-spacing custom-line-height lead pt-5 d-flex align-items-center justify-content-center">
-          <div className="social-hover pe-3 fs-3">
+          <div className="social-hover pe-4 fs-3">
             <a href="https://www.instagram.com/naitik_bhavsar17/?igshid=ZDdkNTZiNTM%3D">
               <i className="bi bi-instagram text-custom "></i>
             </a>
           </div>
-          <div className="social-hover pe-3 fs-3">
+          <div className="social-hover pe-4 fs-3">
             <a href="https://www.instagram.com/">
               <i className="bi bi-facebook text-primary "></i>
             </a>
           </div>
-          <div className="social-hover pe-3 fs-3">
+          <div className="social-hover pe-4 fs-3">
             <a href="https://github.com/nikk-creador">
               <i className="bi bi-github text-dark"></i>
             </a>
           </div>
-          <div className="social-hover pe-3 fs-3">
+          <div className="social-hover pe-4 fs-3">
             <a href="https://www.linkedin.com/in/naitik-bhavsar-b385051b0/">
               <i className="bi bi-linkedin text-primary"></i>
             </a>
           </div>
         </div>
+        <h4
+          style={{ letterSpacing: "0.3rem", lineHeight: "3rem" }}
+          data-aos="flip-up"
+          class="text-dark text-uppercase"
+        >
+          Follow{" "}
+          <span
+            class="fw-bold text-primary"
+            style={{ fontFamily: "Bungee Shade" }}
+          >
+            #naitik
+          </span>
+        </h4>
       </div>
     </Container>
   );
