@@ -58,7 +58,7 @@ const Navbar = () => {
           data-aos="zoom-in"
           to="/"
           className="navbar-brand mx-5"
-        ></Link>
+        >Naitik.dev</Link>
         <button
           ref={navButton}
           className="navbar-toggler"
