@@ -4,25 +4,8 @@ import { useParams } from "react-router-dom";
 import css from "../img/icons8-css3-48.png";
 import js from "../img/icons8-javascript-48.png";
 import sql from "../img//icons8-sql-48.png";
+import serviceList from "./serviceList.json";
 const ServiceDisplay = () => {
-  const serviceList = {
-    design: {
-      title: "Design",
-      description:
-        "Elevate your online game with our web design service. We'll take your website from meh to magnificent in no time!",
-    },
-    development: {
-      title: "Development",
-      description:
-        "From web and mobile app development to custom software, we bring your vision to life. Trusted technology partners for success.",
-    },
-    database: {
-      title: "Database",
-      description:
-        "Unlock the full potential of your data with our SQL service. From complex queries to seamless integrations, we've got you covered",
-    },
-  };
-
   const { slugService } = useParams();
   const service = serviceList[slugService];
   if (!service) {
