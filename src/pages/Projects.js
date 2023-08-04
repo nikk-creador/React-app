@@ -34,14 +34,14 @@ const Projects = () => {
         {location.pathname === "/projects" ? (
           <button
             onClick={handleClickBack}
-            className="btn btn-danger disabled px-3 pt-2"
+            className="btn btn-danger disabled px-4 pt-2"
           >
             Back
           </button>
         ) : (
           <button
             onClick={handleClickBack}
-            className="btn btn-danger  px-3 pt-2"
+            className="btn btn-danger  px-4 pt-2"
           >
             Back
           </button>
@@ -50,14 +50,14 @@ const Projects = () => {
         {count === arr.length ? (
           <button
             onClick={handleClick}
-            className="btn btn-primary ms-5 px-3 pt-2 disabled"
+            className="btn btn-primary ms-5 px-4 pt-2 disabled"
           >
             Next
           </button>
         ) : (
           <button
             onClick={handleClick}
-            className="btn btn-primary ms-5 px-3 pt-2"
+            className="btn btn-primary ms-5 px-4 pt-2"
           >
             Next
           </button>

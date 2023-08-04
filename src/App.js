@@ -31,8 +31,6 @@ export default function App() {
             <Route path="services" element={<Services />}>
               <Route index element={<ServiceName />} />
               <Route path=":slugService" element={<ServiceDisplay />} />
-              {/* index means what it will render first on services route */}
-              {/* child route of services which will be made available using the outlet in v6 */}
             </Route>
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />

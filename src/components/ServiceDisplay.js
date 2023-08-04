@@ -17,7 +17,6 @@ const ServiceDisplay = () => {
     <div className="card custom-services-effect custom-container w-75 mt-4">
       <div className="card-body  bg-light rounded-2 p-4 ">
         <div className="mb-2">
-          {console.log(title, "title")}
           {(() => {
             switch (title) {
               case "Design":
@@ -37,7 +36,12 @@ const ServiceDisplay = () => {
         <div className=" mt-3">
           <h4 className="text-dark">{title}</h4>
         </div>
-        <p className="card-text text-dark lead fs-5 p-3">{description}</p>
+        <p
+          style={{ lineHeight: "1.8rem", letterSpacing: "0.1rem" }}
+          className="card-text text-dark lead fs-5 p-3"
+        >
+          {description}
+        </p>
       </div>
     </div>
   );

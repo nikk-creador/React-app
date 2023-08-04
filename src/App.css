@@ -15,8 +15,7 @@
 .custom-container {
   background-color: #efefef;
   border-radius: 8px;
-
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
@@ -43,16 +42,6 @@
 
 .service-list li a {
   text-decoration: none;
-}
-
-.service-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service-card p {
-  color: #555;
 }
 
 .social-hover {
@@ -95,7 +84,4 @@ a {
 
 p {
   text-align: justify;
-}
-.service-li:nth-child(3) {
-  margin-bottom: 2rem;
 }

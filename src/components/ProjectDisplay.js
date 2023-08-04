@@ -5,31 +5,6 @@ import { useParams } from "react-router-dom";
 import projectList from "./projectList.json";
 
 const ProjectDisplay = () => {
-  // const projectList = {
-  //   frontendbootcamp: {
-  //     title: "Frontend Bootcamp",
-  //     description:
-  //       "A dynamic learning platform built with HTML, CSS,JavaScript, and Bootstrap, providing an immersive experience in front-end development.",
-  //     img: "barber",
-  //     demo: "https://development-bootcamp.netlify.app/",
-  //     code: "https://github.com/nikk-creador/front-end-bootcamp",
-  //   },
-  //   plantdiseaseprediction: {
-  //     title: "Plant Disease Prediction",
-  //     description:
-  //       "Build a CNN model,The system identifies plant diseases with accuracy of 97 percent. Also, developed aninterface using HTML, CSS, and JavaScript to allow users to easily interact with the system locally",
-  //     demo: "https://www.dropbox.com/s/lyla2w0enko9ib7/plant%20disease%20prediction.mp4?dl=0",
-  //     code: "https://www.dropbox.com/s/lyla2w0enko9ib7/plant%20disease%20prediction.mp4?dl=0",
-  //   },
-  //   hairstudio: {
-  //     title: "Hair Studio",
-  //     description:
-  //       "I created a hair studio website using HTML, CSS, and JavaScript to showcase their services and expertise.The website has a user-friendly interface and effectively promotes the studio’s offerings",
-  //     code: "https://github.com/nikk-creador/Hair-Studio-website",
-  //     demo: "https://barbers-point.netlify.app/",
-  //   },
-  // };
-
   const { slugProject } = useParams();
   const project = projectList[slugProject];
   if (!project) {
@@ -48,7 +23,12 @@ const ProjectDisplay = () => {
       <div className="card-body bg-light rounded-2 px-4 py-4 pb-5 pt-4">
         <i className="bi bi-code-slash fs-2"> </i>
         <h4 className="card-title mb-3 mt-3">{title}</h4>
-        <p className="card-text p-3">{description}</p>
+        <p
+          style={{ lineHeight: "1.8rem", letterSpacing: "0.1rem" }}
+          className="card-text p-3"
+        >
+          {description}
+        </p>
         <div className="btn-group mt-3" role="group" aria-label="Basic example">
           <button type="button" className="btn btn-outline-secondary">
             <a
