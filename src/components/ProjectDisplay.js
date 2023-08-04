@@ -46,12 +46,9 @@ const ProjectDisplay = () => {
       <div className="card-body bg-light rounded-2 px-4 py-4 pb-5 pt-4">
         <i className="bi bi-code-slash fs-2"> </i>
         <h4 className="card-title mb-3 mt-3">{title}</h4>
-        <p style={{ textAlign: "justify" }} className="card-text p-3">
-          {description}
-        </p>
+        <p className="card-text p-3">{description}</p>
         <div className="btn-group mt-3" role="group" aria-label="Basic example">
           <button type="button" className="btn btn-outline-secondary">
-            {" "}
             <a
               rel="noreferrer"
               target="_blank"
@@ -62,7 +59,6 @@ const ProjectDisplay = () => {
             </a>
           </button>
           <button type="button" className="btn btn-outline-secondary">
-            {" "}
             <a
               rel="noreferrer"
               target="_blank"

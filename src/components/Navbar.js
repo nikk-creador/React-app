@@ -55,7 +55,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom p-3 fs-5">
         <Link
           onClick={collapseNav}
-          data-aos="fade-right"
+          data-aos="zoom-in"
           to="/"
           className="navbar-brand mx-5"
         >
