@@ -4,18 +4,16 @@
   font-family: "Poppins", sans-serif;
 }
 
+
+.custom-container {
+  border-radius: 8px;
+}
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: calc(100vh - 187px);
-}
-
-.custom-container {
-  background-color: #efefef;
-  border-radius: 8px;
-  box-shadow: 10px 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
