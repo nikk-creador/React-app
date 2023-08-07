@@ -5,7 +5,6 @@ import ProjectDisplay from "./components/ProjectDisplay";
 import Services from "./pages/Services";
 import ServiceName from "./components/ServiceName";
 import ServiceDisplay from "./components/ServiceDisplay";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -15,6 +14,7 @@ import Navbar from "./components/Navbar";
 import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
 export default function App() {
   return (
     <Router>
