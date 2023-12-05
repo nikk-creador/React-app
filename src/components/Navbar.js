@@ -36,11 +36,6 @@ const Navbar = () => {
     },
   ];
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const handleClick = () => {
-    setIsDarkMode((prevState) => !prevState);
-  };
-  // dark mode button
   const navButton = useRef(null);
   const linksContainerRef = useRef(null);
 
